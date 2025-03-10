@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맞추기 사이트</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #4a3b8c;
+        }
+
+        .header {
+            padding: 20px;
+            position: relative;
+        }
+
+        .logo-container {
+            text-align: center;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .filter-btn {
+            padding: 15px;
+            background: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-btn {
+            padding: 15px 30px;
+            background: #8c3bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .image-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .image-info {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav-buttons">
+            <a href="#" class="nav-btn">공지사항</a>
+            <a href="#" class="nav-btn">로그인</a>
+        </div>
+        <div class="logo-container">
+            <img src="image.png" alt="로고" class="logo">
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="search-box">
+            <button class="filter-btn">▼</button>
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요.">
+            <button class="search-btn">검색</button>
+        </div>
+    </div>
+
+    <div class="image-grid">
+        <!-- 샘플 이미지 카드 -->
+        <div class="image-card">
+            <img src="https://via.placeholder.com/250x200" alt="샘플 이미지">
+            <div class="image-info">
+                <h3>이미지 제목</h3>
+                <p>이미지 설명</p>
+            </div>
+        </div>
+        <!-- 추가 이미지 카드들... -->
+        <div class="image-card">
+            <img src="https://via.placeholder.com/250x200" alt="샘플 이미지">
+            <div class="image-info">
+                <h3>이미지 제목</h3>
+                <p>이미지 설명</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://via.placeholder.com/250x200" alt="샘플 이미지">
+            <div class="image-info">
+                <h3>이미지 제목</h3>
+                <p>이미지 설명</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://via.placeholder.com/250x200" alt="샘플 이미지">
+            <div class="image-info">
+                <h3>이미지 제목</h3>
+                <p>이미지 설명</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
