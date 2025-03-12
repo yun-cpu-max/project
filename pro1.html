@@ -136,7 +136,7 @@
         <div class="image-card">
             <img src="https://via.placeholder.com/250x200" alt="샘플 이미지">
             <div class="image-info">
-                <h3>이미지 제목</h3>
+                <h3>이미지 제목1</h3>
                 <p>이미지 설명</p>
             </div>
         </div>
@@ -163,5 +163,35 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBtn = document.querySelector('.search-btn');
+            const searchInput = document.querySelector('.search-input');
+            const imageCards = document.querySelectorAll('.image-card');
+
+            searchBtn.addEventListener('click', function() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                
+                imageCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            // Enter 키로도 검색 가능하도록 설정
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchBtn.click();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
